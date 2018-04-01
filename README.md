@@ -46,3 +46,14 @@ PHD2_cmds_proxy.exe --v --c="{\"method\": \"guide\", \"params\": [{\"pixels\": 1
 
 This example will cause PHD/2 to start looping, attempt to find a guide star, calibrate if it must and commence guiding. We wait for a response that contains the string "SettleDone" to tell us for good or bad that PHD/2 is done.
 
+## Cloning.
+
+Clone with --recursive as there is a single submodule to pull in as well.
+
+```
+git clone --recursive https://github.com/NgileahObservatory/PHD2_cmds_proxy.git
+```
+
+## Building.
+
+In Visual Studio, open the solution file (.sln). Build. Job done.
