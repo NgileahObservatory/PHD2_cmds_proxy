@@ -39,8 +39,8 @@ namespace PHD2_cmds_proxy
       private static OptionSet cmdOptions = new OptionSet
       {
 		   { "v|verbose", "Get extra spammy output including step by step logging of communications.", v => { verbose = (v != null); } },
-		   { "c|command=", "Quoted json command to send verbatim to PHD/2. Cannot be specified with --script. --response is optional with --command.",   v => { command = v; } },
-		   { "r|response=", "Regular expression that matches json response from PHD/2 that indicates success. Requires --command be specified.",   v => { response = v; } },
+		   { "c|command=", "Quoted json command to send verbatim to PHD/2. --response is optional with --command.",   v => { command = v; } },
+		   { "r|response=", "Regular expression that matches json response from PHD/2 that indicates command is done. Requires --command be specified.",   v => { response = v; } },
 		   { "h|host=", "Optional host to connect to. Default is localhost if none specified.",   v => { host = v; } },
 		   { "p|port=", "Optional port on host to connect to. Default is port 4400 if none specified.",   v => { port = int.Parse(v); } },
 		   { "?|help", "Display this help.",  v => { showHelp = v != null; } },
@@ -48,7 +48,7 @@ namespace PHD2_cmds_proxy
 
       private static void ShowHelp()
       {
-         Console.WriteLine("Usage: PHD2_cmds_proxy {--verbose|help} [--script=filename|--command=\"json string\" {--response=\"json string\"}] {--host=hostname {--port=number}}");
+         Console.WriteLine("Usage: PHD2_cmds_proxy {--verbose|help} [--command=\"json string\" {--response=\"regex to match json string response\"}] {--host=hostname {--port=number}}");
          Console.WriteLine("Send commands over TCP/IP to PHD/2 and optionally handle responses.");
          Console.WriteLine();
          Console.WriteLine("Options:");
