@@ -60,9 +60,9 @@ In Visual Studio, open the solution file (.sln). Build. Job done.
 
 ## Example use with a third party application.
 
-[MPO Connections](http://www.minorplanetobserver.com/MPOSoftware/MPOConnections.htm) has powerful scripting capabilities. It can run other programs from its scripts but command line parameters are limited to 20 characters.
+[MPO Connections](http://www.minorplanetobserver.com/MPOSoftware/MPOConnections.htm) (Connections) has powerful scripting capabilities. It can run other programs from its scripts but command line parameters are limited to 20 characters.
 
-My setup has batch files to invoke PHD2_cmds_proxy with all the parameters necessary. These are called from MPO Connections and allow connections to start and stop guiding as necessary.
+My setup has batch files to invoke PHD2_cmds_proxy with all the parameters necessary. These are called from MPO Connections and allow Connections to start and stop guiding as necessary.
 
 ![phd_cmds_proxy.PNG](PHD2_cmds_proxy/docs/phd_cmd_proxy.PNG)
 _Figure 1. MPO Connections controlling external guiding. PHD/2 running simulated camera and mount._
